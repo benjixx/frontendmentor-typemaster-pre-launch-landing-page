@@ -13,8 +13,10 @@
 		"@sveltejs/kit": "next",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
-		"svelte": "^3.29.0",
-		"vite": "^2.1.0"
+		"svelte": "^3.37.0",
+		"tailwindcss": "^2.1.1",
+		"vite": "^2.2.1",
+		"vite-plugin-tailwind": "0.0.4"
 	},
 	"type": "module"
 }

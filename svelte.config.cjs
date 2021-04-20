@@ -1,6 +1,8 @@
 const static = require('@sveltejs/adapter-static');
 const pkg = require('./package.json');
 
+const tailwind = require('vite-plugin-tailwind').default;
+
 /** @type {import('@sveltejs/kit').Config} */
 module.exports = {
 	kit: {
@@ -13,6 +15,7 @@ module.exports = {
 		target: '#svelte',
 
 		vite: {
+			plugins: [tailwind()],
 			ssr: {
 				noExternal: Object.keys(pkg.dependencies || {})
 			}

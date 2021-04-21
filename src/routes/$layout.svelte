@@ -1,6 +1,7 @@
 <script>
-	import App from '$lib/App.svelte';
+	import '../app.css';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
-<App />
 <slot />
+<Footer />

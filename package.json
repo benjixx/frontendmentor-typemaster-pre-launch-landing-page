@@ -11,9 +11,11 @@
 	"devDependencies": {
 		"@sveltejs/adapter-static": "next",
 		"@sveltejs/kit": "next",
+		"postcss-load-config": "^3.0.1",
 		"prettier": "~2.2.1",
 		"prettier-plugin-svelte": "^2.2.0",
 		"svelte": "^3.37.0",
+		"svelte-preprocess": "^4.7.2",
 		"tailwindcss": "^2.1.1",
 		"vite": "^2.2.1",
 		"vite-plugin-tailwind": "0.0.4"

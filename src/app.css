@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base elements */
+h1,
+h2,
+h3 {
+	@apply text-blue-dark font-black uppercase;
+}
+
+h1 {
+	@apply text-[48px] leading-[48px] desktop:text-[56px] desktop:leading-[56px];
+}
+
+h2 {
+	@apply text-[32px] leading-[36px];
+}
+
+h3 {
+	@apply text-[24px] leading-[28px] text-center;
+}
+
+p {
+	@apply text-blue-light;
+}
+
+/* base element combinations  */
+* + h1 {
+	@apply mt-16;
+}
+
+* + h2 {
+	@apply mt-14;
+}
+
+* + h3 {
+	@apply mt-12;
+}
+
+h1 + p {
+	@apply mt-8;
+}
+
+h2 + p {
+	@apply mt-6;
+}
+
+h3 + p {
+	@apply mt-6 text-center;
+}
+
+p + .container {
+	@apply mt-8;
+}
+
+.ui-feature + .ui-feature {
+	@apply mt-16;
+}

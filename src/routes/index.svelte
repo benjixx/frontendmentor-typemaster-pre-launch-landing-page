@@ -1,7 +1,7 @@
 <script>
 	import Logo from '$lib/Logo.svelte';
 	import Button from '$lib/Button.svelte';
-	import Feature from '$lib/Feature.svelte';
+	import Features from '$lib/Features.svelte';
 </script>
 
 <main>
@@ -21,10 +21,10 @@
 		</div>
 		<div class="ui-release-info ml-8 font-bold text-blue-light uppercase">Release on 5/27</div>
 	</div>
-	<img src="/mobile/image-keyboard.jpg" alt="" class="keyboard" />
 
-	<img src="" alt="" class="keyboard-orange" />
-	<img src="" alt="" class="keyboard2" />
+	<div class="image image-keyboard" />
+	<div class="image image-phone-and-keyboard" />
+	<div class="image image-glass-and-keyboard" />
 
 	<h2>Mechanical Wireless Keyboard</h2>
 	<p>
@@ -32,30 +32,39 @@
 		switches and keycaps, along with reliable wireless connectivity.
 	</p>
 
-	<div class="mt-28">
-		<Feature
-			icon="compatible"
-			title="Highly Compatible"
-			description="Easy to use and works well with all major computer brands, gaming consoles and mobile devices.
-Plug & play, no installation or driver needed."
-		/>
-		<Feature
-			icon="bluetooth"
-			title="Wireless with Bluetooth"
-			description="Powerful 2.4G RF technology allows you to connect the cordless keyboard from up to 30ft away.
-Simply plug the unifying receiver into your computer."
-		/>
-		<Feature
-			icon="battery"
-			title="High Capacity Battery"
-			description="Equipped with a long-lasting built-in battery, you’ll never have to spend a dime on replaceable
-ones. Enjoy 40 hours of usage time between charges."
-		/>
-		<Feature
-			icon="light"
-			title="RGB Backlit Modes"
-			description="Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows
-intensely in the dark and helps you type in low light conditions."
-		/>
-	</div>
+	<Features />
 </main>
+
+<style>
+	.image-keyboard {
+		@apply mt-16 rounded-tl-[20px] rounded-bl-[20px] bg-cover;
+		width: 351px;
+		height: 331px;
+		background-image: url('/mobile/image-keyboard.jpg');
+	}
+
+	.image-phone-and-keyboard {
+		@apply inline-block relative ml-[-24px] mt-6 rounded-tr-[20px] rounded-br-[20px];
+		width: 107px;
+		height: 193px;
+		background: #f16718;
+	}
+	.image-phone-and-keyboard::after {
+		@apply absolute top-0 right-0 bottom-0 left-0 rounded-tr-[20px] rounded-br-[20px] mix-blend-multiply opacity-75 bg-cover bg-no-repeat;
+		content: '';
+		background-image: url('/mobile/image-phone-and-keyboard.jpg');
+		background-position: right;
+	}
+
+	.image-glass-and-keyboard {
+		/* TODO: ml-5 is a workaround as there is another empty text node */
+		@apply inline-block ml-5 rounded-[20px] bg-cover;
+		width: 220px;
+		height: 193px;
+		background-image: url('/mobile/image-glass-and-keyboard.jpg');
+	}
+
+	.image {
+		@apply bg-no-repeat;
+	}
+</style>

@@ -14,11 +14,11 @@ h1 {
 }
 
 h2 {
-	@apply text-[32px] leading-[36px];
+	@apply mx-14 text-[32px] leading-[36px] text-center;
 }
 
 h3 {
-	@apply text-[24px] leading-[28px] text-center;
+	@apply mx-14 text-[24px] leading-[28px] text-center;
 }
 
 p {
@@ -31,7 +31,7 @@ p {
 }
 
 * + h2 {
-	@apply mt-14;
+	@apply mt-16;
 }
 
 * + h3 {
@@ -43,7 +43,7 @@ h1 + p {
 }
 
 h2 + p {
-	@apply mt-6;
+	@apply mt-6 text-center;
 }
 
 h3 + p {
@@ -52,8 +52,4 @@ h3 + p {
 
 p + .container {
 	@apply mt-8;
-}
-
-.ui-feature + .ui-feature {
-	@apply mt-16;
 }

@@ -2,7 +2,7 @@
 	import Feature from '$lib/Feature.svelte';
 </script>
 
-<div class="ui-features mt-28 flex flex-wrap">
+<article class="ui-features mt-28 flex flex-wrap">
 	<Feature
 		icon="compatible"
 		title="Highly Compatible"
@@ -27,7 +27,7 @@ ones. Enjoy 40 hours of usage time between charges."
 		description="Choose from 4 backlight brightness levels and adjustable breathing speed. Each key glows
 intensely in the dark and helps you type in low light conditions."
 	/>
-</div>
+</article>
 
 <style>
 	.ui-features > :global(.ui-feature) {

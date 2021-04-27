@@ -14,11 +14,11 @@ h1 {
 }
 
 h2 {
-	@apply mx-14 mt-16 text-[32px] leading-[36px] text-center;
+	@apply mx-14 tablet:mx-0 mt-16 tablet:mt-0 text-[32px] leading-[36px] text-center tablet:text-left;
 }
 
 h3 {
-	@apply mt-12 px-14 text-[24px] leading-[28px] text-center;
+	@apply mt-12 tablet:mt-10 px-14 tablet:pl-0 text-[24px] leading-[28px] text-center tablet:text-left;
 }
 
 p {
@@ -32,11 +32,11 @@ h1 + p {
 }
 
 h2 + p {
-	@apply mt-6 text-center;
+	@apply mt-6 text-center tablet:text-left;
 }
 
 h3 + p {
-	@apply mt-6 text-center;
+	@apply mt-6 text-center tablet:text-left;
 }
 
 p + .container {

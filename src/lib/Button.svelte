@@ -3,7 +3,7 @@
 </script>
 
 <a
-	class="ui-button inline-block px-[14px] py-[11px] tablet:px-7 tablet:py-4 rounded-lg font-bold uppercase type-{type} transition-colors"
+	class="ui-button inline-block px-[14px] py-[11px] tablet:px-[27px] tablet:py-4 rounded-lg font-bold uppercase type-{type} transition-colors"
 	href="#"><slot /></a
 >
 

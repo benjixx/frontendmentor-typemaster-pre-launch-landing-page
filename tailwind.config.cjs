@@ -5,7 +5,7 @@ module.exports = {
 	theme: {
 		screens: {
 			tablet: '768px',
-			desktop: '1440px'
+			desktop: '1110px'
 		},
 		colors: {
 			transparent: 'transparent',

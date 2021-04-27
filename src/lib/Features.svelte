@@ -2,7 +2,7 @@
 	import Feature from '$lib/Feature.svelte';
 </script>
 
-<article class="ui-features mt-28 flex flex-wrap">
+<article class="ui-features mt-28 desktop:mt-[168px] flex flex-wrap">
 	<Feature
 		icon="compatible"
 		title="Highly Compatible"

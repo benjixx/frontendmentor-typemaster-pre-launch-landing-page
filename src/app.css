@@ -42,3 +42,7 @@ h3 + p {
 p + .container {
 	@apply mt-8;
 }
+
+#svelte {
+	@apply desktop:my-0 desktop:mx-auto desktop:w-[1110px];
+}

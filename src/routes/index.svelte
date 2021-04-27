@@ -3,10 +3,12 @@
 	import Features from '$lib/Features.svelte';
 </script>
 
-<main class="ui-main mx-[-24px] tablet:mx-[-40px] flex flex-row flex-wrap tablet:items-center">
-	<article class="mx-6 tablet:mx-10 w-[327px] tablet:w-[339px]">
+<main
+	class="ui-main relative mx-[-24px] tablet:mx-[-40px] flex flex-row flex-wrap tablet:items-center"
+>
+	<article class="mx-6 tablet:mx-10 w-[327px] tablet:w-[339px] desktop:w-[445px]">
 		<h1>Typemaster Keyboard</h1>
-		<p>
+		<p class="desktop:text-lg">
 			Improve your productivity and gaming without breaking the bank. Upgrade to a high quality
 			mechanical typing experience.
 		</p>
@@ -18,7 +20,7 @@
 		</div>
 	</article>
 
-	<div class="crop-image-keyboard mt-16 tablet:mt-[62px] overflow-hidden">
+	<div class="crop-image-keyboard mt-16 overflow-hidden tablet:mt-[62px] desktop:ml-[57px]">
 		<div class="image-keyboard" />
 	</div>
 
@@ -30,9 +32,11 @@
 		<div class="image-glass-and-keyboard" />
 	</div>
 
-	<article class="mx-6 tablet:mx-10 tablet:mt-[72px] tablet:flex tablet:flex-row items-center">
+	<article
+		class="ui-article-mwk mx-6 tablet:mx-10 tablet:mt-[72px] tablet:flex tablet:flex-row tablet:items-center desktop:block desktop:ml-[125px]"
+	>
 		<h2>Mechanical Wireless Keyboard</h2>
-		<p class="tablet:mt-0 tablet:ml-[50px]">
+		<p class="tablet:mt-0 tablet:ml-[50px] desktop:mt-7 desktop:ml-0">
 			The Typemaster keyboard boasts top-notch build and practical design. It offers a wide variety
 			of switches and keycaps, along with reliable wireless connectivity.
 		</p>
@@ -104,6 +108,57 @@
 		.image-glass-and-keyboard {
 			@apply w-[445px] h-[320px];
 			background-image: url('/tablet/image-glass-and-keyboard.jpg');
+		}
+	}
+
+	@screen desktop {
+		.ui-main::before {
+			content: '';
+			@apply absolute w-[255px] h-[240px] bg-gray-light rounded-[20px];
+			top: 62px;
+			left: 1180px;
+		}
+
+		.ui-main::after {
+			content: '';
+			@apply absolute w-[255px] h-[236px] bg-gray-light rounded-[20px];
+			top: calc(62px + 480px + 40px + 480px - 236px);
+			left: -245px;
+		}
+
+		.crop-image-keyboard {
+			width: unset;
+		}
+
+		.image-keyboard {
+			@apply w-[540px] h-[480px];
+			background-image: url('/desktop/image-keyboard.jpg');
+		}
+
+		.crop-image-phone-and-keyboard {
+			width: unset;
+			height: unset;
+		}
+
+		.image-phone-and-keyboard {
+			@apply w-[255px] h-[480px];
+		}
+		.image-phone-and-keyboard::after {
+			background-image: url('/desktop/image-phone-and-keyboard.jpg');
+		}
+
+		.crop-image-glass-and-keyboard {
+			@apply ml-[30px] mt-10;
+		}
+
+		.image-glass-and-keyboard {
+			@apply w-[445px] h-[480px];
+			background-image: url('/desktop/image-glass-and-keyboard.jpg');
+		}
+
+		.ui-article-mwk {
+			/* FIXME: for some reason required to reset width, otherwise it wraps to its own line */
+			flex-basis: 255px;
 		}
 	}
 </style>

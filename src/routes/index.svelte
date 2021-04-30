@@ -51,7 +51,7 @@
 	}
 
 	.crop-image-keyboard {
-		width: clamp(50px, 351px + calc(100vw - 375px), 372px);
+		width: calc(351px + 100vw - 375px);
 		transform: translateX(24px);
 	}
 

@@ -117,6 +117,8 @@
 			@apply absolute w-[255px] h-[240px] bg-gray-light rounded-[20px];
 			top: 62px;
 			left: 1180px;
+			opacity: 0;
+			transition: opacity 1s ease-out;
 		}
 
 		.ui-main::after {
@@ -124,6 +126,8 @@
 			@apply absolute w-[255px] h-[236px] bg-gray-light rounded-[20px];
 			top: calc(62px + 480px + 40px + 480px - 236px);
 			left: -245px;
+			opacity: 0;
+			transition: opacity 1s ease-out;
 		}
 
 		.crop-image-keyboard {
@@ -159,6 +163,13 @@
 		.ui-article-mwk {
 			/* FIXME: for some reason required to reset width, otherwise it wraps to its own line */
 			flex-basis: 255px;
+		}
+	}
+
+	@media screen and (min-width: 1350px) {
+		.ui-main::before,
+		.ui-main::after {
+			opacity: 1;
 		}
 	}
 </style>
